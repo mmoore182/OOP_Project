@@ -18,7 +18,7 @@ public interface Item {
 
   Date getManufactureDate();
 
-  int getSerialNumber();
+  public int getSerialNumber();
 
 }
 

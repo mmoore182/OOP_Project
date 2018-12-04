@@ -1,8 +1,9 @@
 /**
- * Matthew Moore
- * Product.java
+ * Matthew Moore Product.java
  */
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Date;
 
 public abstract class Product implements Item {
@@ -11,7 +12,7 @@ public abstract class Product implements Item {
   String manufacturer;
   Date manufacturedOn;
   String name;
-  static Integer currentProductionNumber = 0;
+  static Integer currentProductionNumber = 1;
 
   /**
    * Constructor takes product name and sets the field name.
@@ -44,9 +45,11 @@ public abstract class Product implements Item {
     return manufacturedOn;              // Project requires you to return a date.
   }
 
-  public int getSerialnumber() {
+  public int getSerialNumber() {
     return serialnumber;
   }
+
+
 
 
   /**
@@ -58,7 +61,7 @@ public abstract class Product implements Item {
     return "Manufacturer: " + manufacturer + "\n"
         + "Serial Number: " + serialnumber + "\n"
         + "Date: " + manufacturedOn + "\n"
-        + "Name: " + name + "\n";
+        + "Name: " + name;
 
   }
 }
